@@ -1,8 +1,8 @@
 function love.load()
     timer = 0
     direction = "right"
-    gridXCount = 20
-    gridYCount = 15
+    gridXCount = 50
+    gridYCount = 40
     cellSize = 15
     snakeSegments = {
         {x = 3, y = 1},
@@ -57,6 +57,14 @@ function love.draw()
     love.graphics.setColor(.28, .28, .28 )
     love.graphics.rectangle(
         'fill',
+        0,
+        0,
+        gridXCount * cellSize,
+        gridYCount * cellSize
+        )
+
+    love.graphics.rectangle(
+        'line',
         0,
         0,
         gridXCount * cellSize,
